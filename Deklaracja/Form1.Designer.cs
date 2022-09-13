@@ -30,28 +30,25 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.groupBoxDane = new System.Windows.Forms.GroupBox();
-            this.groupBoxAdres = new System.Windows.Forms.GroupBox();
-            this.labelNaglowek = new System.Windows.Forms.Label();
-            this.labelNazwisko = new System.Windows.Forms.Label();
-            this.labelImiona = new System.Windows.Forms.Label();
-            this.labelDataMiejsce = new System.Windows.Forms.Label();
-            this.labelPESEL = new System.Windows.Forms.Label();
-            this.textBoxNazwisko = new System.Windows.Forms.TextBox();
-            this.textBoxImie = new System.Windows.Forms.TextBox();
-            this.textBoxDataUr = new System.Windows.Forms.TextBox();
-            this.textBoxPESEL = new System.Windows.Forms.TextBox();
             this.textBoxMiejsceUr = new System.Windows.Forms.TextBox();
-            this.labelMiejscowosc = new System.Windows.Forms.Label();
-            this.labelUlica = new System.Windows.Forms.Label();
-            this.labelKodPoczta = new System.Windows.Forms.Label();
-            this.labelNumerTel = new System.Windows.Forms.Label();
-            this.textBoxMiejscowosc = new System.Windows.Forms.TextBox();
-            this.textBoxUlica = new System.Windows.Forms.TextBox();
-            this.textBoxKodPocztowy = new System.Windows.Forms.TextBox();
-            this.textBoxPoczta = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxPESEL = new System.Windows.Forms.TextBox();
+            this.textBoxDataUr = new System.Windows.Forms.TextBox();
+            this.textBoxImie = new System.Windows.Forms.TextBox();
+            this.textBoxNazwisko = new System.Windows.Forms.TextBox();
+            this.labelPESEL = new System.Windows.Forms.Label();
+            this.labelDataMiejsce = new System.Windows.Forms.Label();
+            this.labelImiona = new System.Windows.Forms.Label();
+            this.labelNazwisko = new System.Windows.Forms.Label();
+            this.groupBoxAdres = new System.Windows.Forms.GroupBox();
             this.labelEmail = new System.Windows.Forms.Label();
+            this.textBoxPoczta = new System.Windows.Forms.TextBox();
+            this.textBoxUlica = new System.Windows.Forms.TextBox();
+            this.textBoxMiejscowosc = new System.Windows.Forms.TextBox();
+            this.labelNumerTel = new System.Windows.Forms.Label();
+            this.labelKodPoczta = new System.Windows.Forms.Label();
+            this.labelUlica = new System.Windows.Forms.Label();
+            this.labelMiejscowosc = new System.Windows.Forms.Label();
+            this.labelNaglowek = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.radioButtonInformatyk = new System.Windows.Forms.RadioButton();
@@ -60,14 +57,17 @@
             this.comboBoxKwalifikacja = new System.Windows.Forms.ComboBox();
             this.labelKwalifikacja = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.radioButtonPierwszy = new System.Windows.Forms.RadioButton();
-            this.radioButtonKolejny = new System.Windows.Forms.RadioButton();
-            this.checkBoxPisemna = new System.Windows.Forms.CheckBox();
             this.checkBoxPraktyczna = new System.Windows.Forms.CheckBox();
+            this.checkBoxPisemna = new System.Windows.Forms.CheckBox();
+            this.radioButtonKolejny = new System.Windows.Forms.RadioButton();
+            this.radioButtonPierwszy = new System.Windows.Forms.RadioButton();
             this.richTextBoxPole = new System.Windows.Forms.RichTextBox();
             this.buttonWyczysc = new System.Windows.Forms.Button();
             this.buttonZapisz = new System.Windows.Forms.Button();
             this.buttonZatwierdz = new System.Windows.Forms.Button();
+            this.maskedTextBoxTelefon = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBoxKodPocztowy = new System.Windows.Forms.MaskedTextBox();
+            this.textBoxMail = new System.Windows.Forms.TextBox();
             this.groupBoxDane.SuspendLayout();
             this.groupBoxAdres.SuspendLayout();
             this.panelRadio.SuspendLayout();
@@ -93,13 +93,90 @@
             this.groupBoxDane.TabStop = false;
             this.groupBoxDane.Text = "Dane osobowe ucznia";
             // 
+            // textBoxMiejsceUr
+            // 
+            this.textBoxMiejsceUr.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBoxMiejsceUr.Location = new System.Drawing.Point(286, 79);
+            this.textBoxMiejsceUr.Name = "textBoxMiejsceUr";
+            this.textBoxMiejsceUr.Size = new System.Drawing.Size(193, 23);
+            this.textBoxMiejsceUr.TabIndex = 8;
+            // 
+            // textBoxPESEL
+            // 
+            this.textBoxPESEL.Location = new System.Drawing.Point(189, 108);
+            this.textBoxPESEL.MaxLength = 11;
+            this.textBoxPESEL.Name = "textBoxPESEL";
+            this.textBoxPESEL.Size = new System.Drawing.Size(150, 23);
+            this.textBoxPESEL.TabIndex = 7;
+            // 
+            // textBoxDataUr
+            // 
+            this.textBoxDataUr.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBoxDataUr.Location = new System.Drawing.Point(189, 79);
+            this.textBoxDataUr.Name = "textBoxDataUr";
+            this.textBoxDataUr.Size = new System.Drawing.Size(91, 23);
+            this.textBoxDataUr.TabIndex = 6;
+            // 
+            // textBoxImie
+            // 
+            this.textBoxImie.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBoxImie.Location = new System.Drawing.Point(189, 50);
+            this.textBoxImie.Name = "textBoxImie";
+            this.textBoxImie.Size = new System.Drawing.Size(290, 23);
+            this.textBoxImie.TabIndex = 5;
+            // 
+            // textBoxNazwisko
+            // 
+            this.textBoxNazwisko.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBoxNazwisko.Location = new System.Drawing.Point(189, 21);
+            this.textBoxNazwisko.Name = "textBoxNazwisko";
+            this.textBoxNazwisko.Size = new System.Drawing.Size(290, 23);
+            this.textBoxNazwisko.TabIndex = 4;
+            // 
+            // labelPESEL
+            // 
+            this.labelPESEL.AutoSize = true;
+            this.labelPESEL.Location = new System.Drawing.Point(13, 108);
+            this.labelPESEL.Name = "labelPESEL";
+            this.labelPESEL.Size = new System.Drawing.Size(81, 15);
+            this.labelPESEL.TabIndex = 3;
+            this.labelPESEL.Text = "Numer PESEL:";
+            // 
+            // labelDataMiejsce
+            // 
+            this.labelDataMiejsce.AutoSize = true;
+            this.labelDataMiejsce.Location = new System.Drawing.Point(13, 79);
+            this.labelDataMiejsce.Name = "labelDataMiejsce";
+            this.labelDataMiejsce.Size = new System.Drawing.Size(138, 15);
+            this.labelDataMiejsce.TabIndex = 2;
+            this.labelDataMiejsce.Text = "Data i miejsce urodzenia:";
+            // 
+            // labelImiona
+            // 
+            this.labelImiona.AutoSize = true;
+            this.labelImiona.Location = new System.Drawing.Point(13, 50);
+            this.labelImiona.Name = "labelImiona";
+            this.labelImiona.Size = new System.Drawing.Size(81, 15);
+            this.labelImiona.TabIndex = 1;
+            this.labelImiona.Text = "Imię (imiona):";
+            // 
+            // labelNazwisko
+            // 
+            this.labelNazwisko.AutoSize = true;
+            this.labelNazwisko.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelNazwisko.Location = new System.Drawing.Point(13, 21);
+            this.labelNazwisko.Name = "labelNazwisko";
+            this.labelNazwisko.Size = new System.Drawing.Size(60, 15);
+            this.labelNazwisko.TabIndex = 0;
+            this.labelNazwisko.Text = "Nazwisko:";
+            // 
             // groupBoxAdres
             // 
+            this.groupBoxAdres.Controls.Add(this.textBoxMail);
+            this.groupBoxAdres.Controls.Add(this.maskedTextBoxKodPocztowy);
             this.groupBoxAdres.Controls.Add(this.labelEmail);
-            this.groupBoxAdres.Controls.Add(this.textBox2);
-            this.groupBoxAdres.Controls.Add(this.textBox1);
+            this.groupBoxAdres.Controls.Add(this.maskedTextBoxTelefon);
             this.groupBoxAdres.Controls.Add(this.textBoxPoczta);
-            this.groupBoxAdres.Controls.Add(this.textBoxKodPocztowy);
             this.groupBoxAdres.Controls.Add(this.textBoxUlica);
             this.groupBoxAdres.Controls.Add(this.textBoxMiejscowosc);
             this.groupBoxAdres.Controls.Add(this.labelNumerTel);
@@ -114,114 +191,38 @@
             this.groupBoxAdres.TabStop = false;
             this.groupBoxAdres.Text = "Adres korespondencyjny";
             // 
-            // labelNaglowek
+            // labelEmail
             // 
-            this.labelNaglowek.AutoSize = true;
-            this.labelNaglowek.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelNaglowek.Location = new System.Drawing.Point(89, 23);
-            this.labelNaglowek.Name = "labelNaglowek";
-            this.labelNaglowek.Size = new System.Drawing.Size(417, 25);
-            this.labelNaglowek.TabIndex = 2;
-            this.labelNaglowek.Text = "DEKLARACJA PRZYSTĄPIENIA DO EGZAMINU";
+            this.labelEmail.AutoSize = true;
+            this.labelEmail.Location = new System.Drawing.Point(298, 119);
+            this.labelEmail.Name = "labelEmail";
+            this.labelEmail.Size = new System.Drawing.Size(33, 15);
+            this.labelEmail.TabIndex = 10;
+            this.labelEmail.Text = "mail:";
             // 
-            // labelNazwisko
+            // textBoxPoczta
             // 
-            this.labelNazwisko.AutoSize = true;
-            this.labelNazwisko.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelNazwisko.Location = new System.Drawing.Point(13, 21);
-            this.labelNazwisko.Name = "labelNazwisko";
-            this.labelNazwisko.Size = new System.Drawing.Size(60, 15);
-            this.labelNazwisko.TabIndex = 0;
-            this.labelNazwisko.Text = "Nazwisko:";
+            this.textBoxPoczta.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBoxPoczta.Location = new System.Drawing.Point(286, 87);
+            this.textBoxPoczta.Name = "textBoxPoczta";
+            this.textBoxPoczta.Size = new System.Drawing.Size(193, 23);
+            this.textBoxPoczta.TabIndex = 7;
             // 
-            // labelImiona
+            // textBoxUlica
             // 
-            this.labelImiona.AutoSize = true;
-            this.labelImiona.Location = new System.Drawing.Point(13, 50);
-            this.labelImiona.Name = "labelImiona";
-            this.labelImiona.Size = new System.Drawing.Size(81, 15);
-            this.labelImiona.TabIndex = 1;
-            this.labelImiona.Text = "Imię (imiona):";
+            this.textBoxUlica.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBoxUlica.Location = new System.Drawing.Point(189, 58);
+            this.textBoxUlica.Name = "textBoxUlica";
+            this.textBoxUlica.Size = new System.Drawing.Size(290, 23);
+            this.textBoxUlica.TabIndex = 5;
             // 
-            // labelDataMiejsce
+            // textBoxMiejscowosc
             // 
-            this.labelDataMiejsce.AutoSize = true;
-            this.labelDataMiejsce.Location = new System.Drawing.Point(13, 79);
-            this.labelDataMiejsce.Name = "labelDataMiejsce";
-            this.labelDataMiejsce.Size = new System.Drawing.Size(138, 15);
-            this.labelDataMiejsce.TabIndex = 2;
-            this.labelDataMiejsce.Text = "Data i miejsce urodzenia:";
-            // 
-            // labelPESEL
-            // 
-            this.labelPESEL.AutoSize = true;
-            this.labelPESEL.Location = new System.Drawing.Point(13, 108);
-            this.labelPESEL.Name = "labelPESEL";
-            this.labelPESEL.Size = new System.Drawing.Size(81, 15);
-            this.labelPESEL.TabIndex = 3;
-            this.labelPESEL.Text = "Numer PESEL:";
-            // 
-            // textBoxNazwisko
-            // 
-            this.textBoxNazwisko.Location = new System.Drawing.Point(189, 21);
-            this.textBoxNazwisko.Name = "textBoxNazwisko";
-            this.textBoxNazwisko.Size = new System.Drawing.Size(290, 23);
-            this.textBoxNazwisko.TabIndex = 4;
-            // 
-            // textBoxImie
-            // 
-            this.textBoxImie.Location = new System.Drawing.Point(189, 50);
-            this.textBoxImie.Name = "textBoxImie";
-            this.textBoxImie.Size = new System.Drawing.Size(290, 23);
-            this.textBoxImie.TabIndex = 5;
-            // 
-            // textBoxDataUr
-            // 
-            this.textBoxDataUr.Location = new System.Drawing.Point(189, 79);
-            this.textBoxDataUr.Name = "textBoxDataUr";
-            this.textBoxDataUr.Size = new System.Drawing.Size(91, 23);
-            this.textBoxDataUr.TabIndex = 6;
-            // 
-            // textBoxPESEL
-            // 
-            this.textBoxPESEL.Location = new System.Drawing.Point(189, 108);
-            this.textBoxPESEL.Name = "textBoxPESEL";
-            this.textBoxPESEL.Size = new System.Drawing.Size(150, 23);
-            this.textBoxPESEL.TabIndex = 7;
-            // 
-            // textBoxMiejsceUr
-            // 
-            this.textBoxMiejsceUr.Location = new System.Drawing.Point(286, 79);
-            this.textBoxMiejsceUr.Name = "textBoxMiejsceUr";
-            this.textBoxMiejsceUr.Size = new System.Drawing.Size(193, 23);
-            this.textBoxMiejsceUr.TabIndex = 8;
-            // 
-            // labelMiejscowosc
-            // 
-            this.labelMiejscowosc.AutoSize = true;
-            this.labelMiejscowosc.Location = new System.Drawing.Point(13, 29);
-            this.labelMiejscowosc.Name = "labelMiejscowosc";
-            this.labelMiejscowosc.Size = new System.Drawing.Size(78, 15);
-            this.labelMiejscowosc.TabIndex = 0;
-            this.labelMiejscowosc.Text = "miejscowość:";
-            // 
-            // labelUlica
-            // 
-            this.labelUlica.AutoSize = true;
-            this.labelUlica.Location = new System.Drawing.Point(13, 58);
-            this.labelUlica.Name = "labelUlica";
-            this.labelUlica.Size = new System.Drawing.Size(114, 15);
-            this.labelUlica.TabIndex = 1;
-            this.labelUlica.Text = "ulica i numer domu:";
-            // 
-            // labelKodPoczta
-            // 
-            this.labelKodPoczta.AutoSize = true;
-            this.labelKodPoczta.Location = new System.Drawing.Point(13, 87);
-            this.labelKodPoczta.Name = "labelKodPoczta";
-            this.labelKodPoczta.Size = new System.Drawing.Size(128, 15);
-            this.labelKodPoczta.TabIndex = 2;
-            this.labelKodPoczta.Text = "kod pocztowy i poczta:";
+            this.textBoxMiejscowosc.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBoxMiejscowosc.Location = new System.Drawing.Point(189, 29);
+            this.textBoxMiejscowosc.Name = "textBoxMiejscowosc";
+            this.textBoxMiejscowosc.Size = new System.Drawing.Size(290, 23);
+            this.textBoxMiejscowosc.TabIndex = 4;
             // 
             // labelNumerTel
             // 
@@ -232,56 +233,42 @@
             this.labelNumerTel.TabIndex = 3;
             this.labelNumerTel.Text = "nr telefonu z kierunkowym:";
             // 
-            // textBoxMiejscowosc
+            // labelKodPoczta
             // 
-            this.textBoxMiejscowosc.Location = new System.Drawing.Point(189, 29);
-            this.textBoxMiejscowosc.Name = "textBoxMiejscowosc";
-            this.textBoxMiejscowosc.Size = new System.Drawing.Size(290, 23);
-            this.textBoxMiejscowosc.TabIndex = 4;
+            this.labelKodPoczta.AutoSize = true;
+            this.labelKodPoczta.Location = new System.Drawing.Point(13, 87);
+            this.labelKodPoczta.Name = "labelKodPoczta";
+            this.labelKodPoczta.Size = new System.Drawing.Size(128, 15);
+            this.labelKodPoczta.TabIndex = 2;
+            this.labelKodPoczta.Text = "kod pocztowy i poczta:";
             // 
-            // textBoxUlica
+            // labelUlica
             // 
-            this.textBoxUlica.Location = new System.Drawing.Point(189, 58);
-            this.textBoxUlica.Name = "textBoxUlica";
-            this.textBoxUlica.Size = new System.Drawing.Size(290, 23);
-            this.textBoxUlica.TabIndex = 5;
+            this.labelUlica.AutoSize = true;
+            this.labelUlica.Location = new System.Drawing.Point(13, 58);
+            this.labelUlica.Name = "labelUlica";
+            this.labelUlica.Size = new System.Drawing.Size(114, 15);
+            this.labelUlica.TabIndex = 1;
+            this.labelUlica.Text = "ulica i numer domu:";
             // 
-            // textBoxKodPocztowy
+            // labelMiejscowosc
             // 
-            this.textBoxKodPocztowy.Location = new System.Drawing.Point(189, 87);
-            this.textBoxKodPocztowy.Name = "textBoxKodPocztowy";
-            this.textBoxKodPocztowy.Size = new System.Drawing.Size(91, 23);
-            this.textBoxKodPocztowy.TabIndex = 6;
+            this.labelMiejscowosc.AutoSize = true;
+            this.labelMiejscowosc.Location = new System.Drawing.Point(13, 29);
+            this.labelMiejscowosc.Name = "labelMiejscowosc";
+            this.labelMiejscowosc.Size = new System.Drawing.Size(78, 15);
+            this.labelMiejscowosc.TabIndex = 0;
+            this.labelMiejscowosc.Text = "miejscowość:";
             // 
-            // textBoxPoczta
+            // labelNaglowek
             // 
-            this.textBoxPoczta.Location = new System.Drawing.Point(286, 87);
-            this.textBoxPoczta.Name = "textBoxPoczta";
-            this.textBoxPoczta.Size = new System.Drawing.Size(193, 23);
-            this.textBoxPoczta.TabIndex = 7;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(337, 116);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(142, 23);
-            this.textBox1.TabIndex = 8;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(189, 116);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(103, 23);
-            this.textBox2.TabIndex = 9;
-            // 
-            // labelEmail
-            // 
-            this.labelEmail.AutoSize = true;
-            this.labelEmail.Location = new System.Drawing.Point(298, 119);
-            this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new System.Drawing.Size(33, 15);
-            this.labelEmail.TabIndex = 10;
-            this.labelEmail.Text = "mail:";
+            this.labelNaglowek.AutoSize = true;
+            this.labelNaglowek.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelNaglowek.Location = new System.Drawing.Point(89, 23);
+            this.labelNaglowek.Name = "labelNaglowek";
+            this.labelNaglowek.Size = new System.Drawing.Size(417, 25);
+            this.labelNaglowek.TabIndex = 2;
+            this.labelNaglowek.Text = "DEKLARACJA PRZYSTĄPIENIA DO EGZAMINU";
             // 
             // comboBox1
             // 
@@ -315,6 +302,7 @@
             this.radioButtonInformatyk.TabStop = true;
             this.radioButtonInformatyk.Text = "technik informatyk";
             this.radioButtonInformatyk.UseVisualStyleBackColor = true;
+            this.radioButtonInformatyk.CheckedChanged += new System.EventHandler(this.radioButtonInformatyk_CheckedChanged);
             // 
             // radioButtonProgramista
             // 
@@ -326,6 +314,7 @@
             this.radioButtonProgramista.TabStop = true;
             this.radioButtonProgramista.Text = "technik programista";
             this.radioButtonProgramista.UseVisualStyleBackColor = true;
+            this.radioButtonProgramista.CheckedChanged += new System.EventHandler(this.radioButtonProgramista_CheckedChanged);
             // 
             // panelRadio
             // 
@@ -364,16 +353,27 @@
             this.panel1.Size = new System.Drawing.Size(446, 40);
             this.panel1.TabIndex = 10;
             // 
-            // radioButtonPierwszy
+            // checkBoxPraktyczna
             // 
-            this.radioButtonPierwszy.AutoSize = true;
-            this.radioButtonPierwszy.Location = new System.Drawing.Point(3, 11);
-            this.radioButtonPierwszy.Name = "radioButtonPierwszy";
-            this.radioButtonPierwszy.Size = new System.Drawing.Size(105, 19);
-            this.radioButtonPierwszy.TabIndex = 0;
-            this.radioButtonPierwszy.TabStop = true;
-            this.radioButtonPierwszy.Text = "po raz pierwszy";
-            this.radioButtonPierwszy.UseVisualStyleBackColor = true;
+            this.checkBoxPraktyczna.AutoSize = true;
+            this.checkBoxPraktyczna.Enabled = false;
+            this.checkBoxPraktyczna.Location = new System.Drawing.Point(357, 12);
+            this.checkBoxPraktyczna.Name = "checkBoxPraktyczna";
+            this.checkBoxPraktyczna.Size = new System.Drawing.Size(86, 19);
+            this.checkBoxPraktyczna.TabIndex = 3;
+            this.checkBoxPraktyczna.Text = "praktycznej";
+            this.checkBoxPraktyczna.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxPisemna
+            // 
+            this.checkBoxPisemna.AutoSize = true;
+            this.checkBoxPisemna.Enabled = false;
+            this.checkBoxPisemna.Location = new System.Drawing.Point(274, 11);
+            this.checkBoxPisemna.Name = "checkBoxPisemna";
+            this.checkBoxPisemna.Size = new System.Drawing.Size(77, 19);
+            this.checkBoxPisemna.TabIndex = 2;
+            this.checkBoxPisemna.Text = "pisemnej,";
+            this.checkBoxPisemna.UseVisualStyleBackColor = true;
             // 
             // radioButtonKolejny
             // 
@@ -386,25 +386,16 @@
             this.radioButtonKolejny.Text = "po raz kolejny do części";
             this.radioButtonKolejny.UseVisualStyleBackColor = true;
             // 
-            // checkBoxPisemna
+            // radioButtonPierwszy
             // 
-            this.checkBoxPisemna.AutoSize = true;
-            this.checkBoxPisemna.Location = new System.Drawing.Point(274, 11);
-            this.checkBoxPisemna.Name = "checkBoxPisemna";
-            this.checkBoxPisemna.Size = new System.Drawing.Size(77, 19);
-            this.checkBoxPisemna.TabIndex = 2;
-            this.checkBoxPisemna.Text = "pisemnej,";
-            this.checkBoxPisemna.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxPraktyczna
-            // 
-            this.checkBoxPraktyczna.AutoSize = true;
-            this.checkBoxPraktyczna.Location = new System.Drawing.Point(357, 12);
-            this.checkBoxPraktyczna.Name = "checkBoxPraktyczna";
-            this.checkBoxPraktyczna.Size = new System.Drawing.Size(86, 19);
-            this.checkBoxPraktyczna.TabIndex = 3;
-            this.checkBoxPraktyczna.Text = "praktycznej";
-            this.checkBoxPraktyczna.UseVisualStyleBackColor = true;
+            this.radioButtonPierwszy.AutoSize = true;
+            this.radioButtonPierwszy.Location = new System.Drawing.Point(3, 11);
+            this.radioButtonPierwszy.Name = "radioButtonPierwszy";
+            this.radioButtonPierwszy.Size = new System.Drawing.Size(105, 19);
+            this.radioButtonPierwszy.TabIndex = 0;
+            this.radioButtonPierwszy.TabStop = true;
+            this.radioButtonPierwszy.Text = "po raz pierwszy";
+            this.radioButtonPierwszy.UseVisualStyleBackColor = true;
             // 
             // richTextBoxPole
             // 
@@ -440,6 +431,29 @@
             this.buttonZatwierdz.TabIndex = 14;
             this.buttonZatwierdz.Text = "Zatwierdź";
             this.buttonZatwierdz.UseVisualStyleBackColor = true;
+            // 
+            // maskedTextBoxTelefon
+            // 
+            this.maskedTextBoxTelefon.Location = new System.Drawing.Point(189, 116);
+            this.maskedTextBoxTelefon.Mask = "+99 000-000-000";
+            this.maskedTextBoxTelefon.Name = "maskedTextBoxTelefon";
+            this.maskedTextBoxTelefon.Size = new System.Drawing.Size(103, 23);
+            this.maskedTextBoxTelefon.TabIndex = 15;
+            // 
+            // maskedTextBoxKodPocztowy
+            // 
+            this.maskedTextBoxKodPocztowy.Location = new System.Drawing.Point(189, 87);
+            this.maskedTextBoxKodPocztowy.Mask = "00-999";
+            this.maskedTextBoxKodPocztowy.Name = "maskedTextBoxKodPocztowy";
+            this.maskedTextBoxKodPocztowy.Size = new System.Drawing.Size(91, 23);
+            this.maskedTextBoxKodPocztowy.TabIndex = 17;
+            // 
+            // textBoxMail
+            // 
+            this.textBoxMail.Location = new System.Drawing.Point(329, 116);
+            this.textBoxMail.Name = "textBoxMail";
+            this.textBoxMail.Size = new System.Drawing.Size(150, 23);
+            this.textBoxMail.TabIndex = 18;
             // 
             // Form1
             // 
@@ -490,10 +504,7 @@
         private Label labelNazwisko;
         private GroupBox groupBoxAdres;
         private Label labelEmail;
-        private TextBox textBox2;
-        private TextBox textBox1;
         private TextBox textBoxPoczta;
-        private TextBox textBoxKodPocztowy;
         private TextBox textBoxUlica;
         private TextBox textBoxMiejscowosc;
         private Label labelNumerTel;
@@ -517,5 +528,8 @@
         private Button buttonWyczysc;
         private Button buttonZapisz;
         private Button buttonZatwierdz;
+        private TextBox textBoxMail;
+        private MaskedTextBox maskedTextBoxKodPocztowy;
+        private MaskedTextBox maskedTextBoxTelefon;
     }
 }
