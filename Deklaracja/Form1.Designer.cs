@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.groupBoxDane = new System.Windows.Forms.GroupBox();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.textBoxMiejsceUr = new System.Windows.Forms.TextBox();
-            this.textBoxPESEL = new System.Windows.Forms.TextBox();
-            this.textBoxDataUr = new System.Windows.Forms.TextBox();
             this.textBoxImie = new System.Windows.Forms.TextBox();
             this.textBoxNazwisko = new System.Windows.Forms.TextBox();
             this.labelPESEL = new System.Windows.Forms.Label();
@@ -40,7 +40,10 @@
             this.labelImiona = new System.Windows.Forms.Label();
             this.labelNazwisko = new System.Windows.Forms.Label();
             this.groupBoxAdres = new System.Windows.Forms.GroupBox();
+            this.textBoxMail = new System.Windows.Forms.TextBox();
+            this.maskedTextBoxKodPocztowy = new System.Windows.Forms.MaskedTextBox();
             this.labelEmail = new System.Windows.Forms.Label();
+            this.maskedTextBoxTelefon = new System.Windows.Forms.MaskedTextBox();
             this.textBoxPoczta = new System.Windows.Forms.TextBox();
             this.textBoxUlica = new System.Windows.Forms.TextBox();
             this.textBoxMiejscowosc = new System.Windows.Forms.TextBox();
@@ -65,9 +68,6 @@
             this.buttonWyczysc = new System.Windows.Forms.Button();
             this.buttonZapisz = new System.Windows.Forms.Button();
             this.buttonZatwierdz = new System.Windows.Forms.Button();
-            this.maskedTextBoxTelefon = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBoxKodPocztowy = new System.Windows.Forms.MaskedTextBox();
-            this.textBoxMail = new System.Windows.Forms.TextBox();
             this.groupBoxDane.SuspendLayout();
             this.groupBoxAdres.SuspendLayout();
             this.panelRadio.SuspendLayout();
@@ -76,9 +76,9 @@
             // 
             // groupBoxDane
             // 
+            this.groupBoxDane.Controls.Add(this.maskedTextBox2);
+            this.groupBoxDane.Controls.Add(this.maskedTextBox1);
             this.groupBoxDane.Controls.Add(this.textBoxMiejsceUr);
-            this.groupBoxDane.Controls.Add(this.textBoxPESEL);
-            this.groupBoxDane.Controls.Add(this.textBoxDataUr);
             this.groupBoxDane.Controls.Add(this.textBoxImie);
             this.groupBoxDane.Controls.Add(this.textBoxNazwisko);
             this.groupBoxDane.Controls.Add(this.labelPESEL);
@@ -93,6 +93,23 @@
             this.groupBoxDane.TabStop = false;
             this.groupBoxDane.Text = "Dane osobowe ucznia";
             // 
+            // maskedTextBox2
+            // 
+            this.maskedTextBox2.Location = new System.Drawing.Point(189, 79);
+            this.maskedTextBox2.Mask = "00/00/0000";
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(91, 23);
+            this.maskedTextBox2.TabIndex = 10;
+            this.maskedTextBox2.ValidatingType = typeof(System.DateTime);
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(189, 108);
+            this.maskedTextBox1.Mask = "00000000000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(100, 23);
+            this.maskedTextBox1.TabIndex = 9;
+            // 
             // textBoxMiejsceUr
             // 
             this.textBoxMiejsceUr.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -100,22 +117,6 @@
             this.textBoxMiejsceUr.Name = "textBoxMiejsceUr";
             this.textBoxMiejsceUr.Size = new System.Drawing.Size(193, 23);
             this.textBoxMiejsceUr.TabIndex = 8;
-            // 
-            // textBoxPESEL
-            // 
-            this.textBoxPESEL.Location = new System.Drawing.Point(189, 108);
-            this.textBoxPESEL.MaxLength = 11;
-            this.textBoxPESEL.Name = "textBoxPESEL";
-            this.textBoxPESEL.Size = new System.Drawing.Size(150, 23);
-            this.textBoxPESEL.TabIndex = 7;
-            // 
-            // textBoxDataUr
-            // 
-            this.textBoxDataUr.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBoxDataUr.Location = new System.Drawing.Point(189, 79);
-            this.textBoxDataUr.Name = "textBoxDataUr";
-            this.textBoxDataUr.Size = new System.Drawing.Size(91, 23);
-            this.textBoxDataUr.TabIndex = 6;
             // 
             // textBoxImie
             // 
@@ -191,6 +192,21 @@
             this.groupBoxAdres.TabStop = false;
             this.groupBoxAdres.Text = "Adres korespondencyjny";
             // 
+            // textBoxMail
+            // 
+            this.textBoxMail.Location = new System.Drawing.Point(329, 116);
+            this.textBoxMail.Name = "textBoxMail";
+            this.textBoxMail.Size = new System.Drawing.Size(150, 23);
+            this.textBoxMail.TabIndex = 18;
+            // 
+            // maskedTextBoxKodPocztowy
+            // 
+            this.maskedTextBoxKodPocztowy.Location = new System.Drawing.Point(189, 87);
+            this.maskedTextBoxKodPocztowy.Mask = "00-999";
+            this.maskedTextBoxKodPocztowy.Name = "maskedTextBoxKodPocztowy";
+            this.maskedTextBoxKodPocztowy.Size = new System.Drawing.Size(91, 23);
+            this.maskedTextBoxKodPocztowy.TabIndex = 17;
+            // 
             // labelEmail
             // 
             this.labelEmail.AutoSize = true;
@@ -199,6 +215,14 @@
             this.labelEmail.Size = new System.Drawing.Size(33, 15);
             this.labelEmail.TabIndex = 10;
             this.labelEmail.Text = "mail:";
+            // 
+            // maskedTextBoxTelefon
+            // 
+            this.maskedTextBoxTelefon.Location = new System.Drawing.Point(189, 116);
+            this.maskedTextBoxTelefon.Mask = "+99 000-000-000";
+            this.maskedTextBoxTelefon.Name = "maskedTextBoxTelefon";
+            this.maskedTextBoxTelefon.Size = new System.Drawing.Size(103, 23);
+            this.maskedTextBoxTelefon.TabIndex = 15;
             // 
             // textBoxPoczta
             // 
@@ -332,6 +356,7 @@
             this.comboBoxKwalifikacja.Name = "comboBoxKwalifikacja";
             this.comboBoxKwalifikacja.Size = new System.Drawing.Size(121, 23);
             this.comboBoxKwalifikacja.TabIndex = 8;
+            this.comboBoxKwalifikacja.SelectedIndexChanged += new System.EventHandler(this.comboBoxKwalifikacja_SelectedIndexChanged);
             // 
             // labelKwalifikacja
             // 
@@ -432,29 +457,6 @@
             this.buttonZatwierdz.Text = "Zatwierdź";
             this.buttonZatwierdz.UseVisualStyleBackColor = true;
             // 
-            // maskedTextBoxTelefon
-            // 
-            this.maskedTextBoxTelefon.Location = new System.Drawing.Point(189, 116);
-            this.maskedTextBoxTelefon.Mask = "+99 000-000-000";
-            this.maskedTextBoxTelefon.Name = "maskedTextBoxTelefon";
-            this.maskedTextBoxTelefon.Size = new System.Drawing.Size(103, 23);
-            this.maskedTextBoxTelefon.TabIndex = 15;
-            // 
-            // maskedTextBoxKodPocztowy
-            // 
-            this.maskedTextBoxKodPocztowy.Location = new System.Drawing.Point(189, 87);
-            this.maskedTextBoxKodPocztowy.Mask = "00-999";
-            this.maskedTextBoxKodPocztowy.Name = "maskedTextBoxKodPocztowy";
-            this.maskedTextBoxKodPocztowy.Size = new System.Drawing.Size(91, 23);
-            this.maskedTextBoxKodPocztowy.TabIndex = 17;
-            // 
-            // textBoxMail
-            // 
-            this.textBoxMail.Location = new System.Drawing.Point(329, 116);
-            this.textBoxMail.Name = "textBoxMail";
-            this.textBoxMail.Size = new System.Drawing.Size(150, 23);
-            this.textBoxMail.TabIndex = 18;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -493,9 +495,6 @@
         #endregion
 
         private GroupBox groupBoxDane;
-        private TextBox textBoxMiejsceUr;
-        private TextBox textBoxPESEL;
-        private TextBox textBoxDataUr;
         private TextBox textBoxImie;
         private TextBox textBoxNazwisko;
         private Label labelPESEL;
@@ -531,5 +530,8 @@
         private TextBox textBoxMail;
         private MaskedTextBox maskedTextBoxKodPocztowy;
         private MaskedTextBox maskedTextBoxTelefon;
+        private MaskedTextBox maskedTextBox2;
+        private MaskedTextBox maskedTextBox1;
+        private TextBox textBoxMiejsceUr;
     }
 }
