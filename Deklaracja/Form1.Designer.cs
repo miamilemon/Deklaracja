@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.groupBoxDane = new System.Windows.Forms.GroupBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBoxData = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBoxPESEL = new System.Windows.Forms.MaskedTextBox();
             this.textBoxMiejsceUr = new System.Windows.Forms.TextBox();
             this.textBoxImie = new System.Windows.Forms.TextBox();
             this.textBoxNazwisko = new System.Windows.Forms.TextBox();
@@ -52,7 +52,7 @@
             this.labelUlica = new System.Windows.Forms.Label();
             this.labelMiejscowosc = new System.Windows.Forms.Label();
             this.labelNaglowek = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxTermin = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.radioButtonInformatyk = new System.Windows.Forms.RadioButton();
             this.radioButtonProgramista = new System.Windows.Forms.RadioButton();
@@ -76,8 +76,8 @@
             // 
             // groupBoxDane
             // 
-            this.groupBoxDane.Controls.Add(this.maskedTextBox2);
-            this.groupBoxDane.Controls.Add(this.maskedTextBox1);
+            this.groupBoxDane.Controls.Add(this.maskedTextBoxData);
+            this.groupBoxDane.Controls.Add(this.maskedTextBoxPESEL);
             this.groupBoxDane.Controls.Add(this.textBoxMiejsceUr);
             this.groupBoxDane.Controls.Add(this.textBoxImie);
             this.groupBoxDane.Controls.Add(this.textBoxNazwisko);
@@ -93,22 +93,22 @@
             this.groupBoxDane.TabStop = false;
             this.groupBoxDane.Text = "Dane osobowe ucznia";
             // 
-            // maskedTextBox2
+            // maskedTextBoxData
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(189, 79);
-            this.maskedTextBox2.Mask = "00/00/0000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(91, 23);
-            this.maskedTextBox2.TabIndex = 10;
-            this.maskedTextBox2.ValidatingType = typeof(System.DateTime);
+            this.maskedTextBoxData.Location = new System.Drawing.Point(189, 79);
+            this.maskedTextBoxData.Mask = "00/00/0000";
+            this.maskedTextBoxData.Name = "maskedTextBoxData";
+            this.maskedTextBoxData.Size = new System.Drawing.Size(91, 23);
+            this.maskedTextBoxData.TabIndex = 10;
+            this.maskedTextBoxData.ValidatingType = typeof(System.DateTime);
             // 
-            // maskedTextBox1
+            // maskedTextBoxPESEL
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(189, 108);
-            this.maskedTextBox1.Mask = "00000000000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 23);
-            this.maskedTextBox1.TabIndex = 9;
+            this.maskedTextBoxPESEL.Location = new System.Drawing.Point(189, 108);
+            this.maskedTextBoxPESEL.Mask = "00000000000";
+            this.maskedTextBoxPESEL.Name = "maskedTextBoxPESEL";
+            this.maskedTextBoxPESEL.Size = new System.Drawing.Size(100, 23);
+            this.maskedTextBoxPESEL.TabIndex = 9;
             // 
             // textBoxMiejsceUr
             // 
@@ -294,16 +294,16 @@
             this.labelNaglowek.TabIndex = 2;
             this.labelNaglowek.Text = "DEKLARACJA PRZYSTĄPIENIA DO EGZAMINU";
             // 
-            // comboBox1
+            // comboBoxTermin
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBoxTermin.FormattingEnabled = true;
+            this.comboBoxTermin.Items.AddRange(new object[] {
             "styczeń",
             "czerwiec"});
-            this.comboBox1.Location = new System.Drawing.Point(258, 410);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 3;
+            this.comboBoxTermin.Location = new System.Drawing.Point(258, 410);
+            this.comboBoxTermin.Name = "comboBoxTermin";
+            this.comboBoxTermin.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxTermin.TabIndex = 3;
             // 
             // label1
             // 
@@ -410,6 +410,7 @@
             this.radioButtonKolejny.TabStop = true;
             this.radioButtonKolejny.Text = "po raz kolejny do części";
             this.radioButtonKolejny.UseVisualStyleBackColor = true;
+            this.radioButtonKolejny.CheckedChanged += new System.EventHandler(this.radioButtonKolejny_CheckedChanged);
             // 
             // radioButtonPierwszy
             // 
@@ -421,6 +422,7 @@
             this.radioButtonPierwszy.TabStop = true;
             this.radioButtonPierwszy.Text = "po raz pierwszy";
             this.radioButtonPierwszy.UseVisualStyleBackColor = true;
+            this.radioButtonPierwszy.CheckedChanged += new System.EventHandler(this.radioButtonPierwszy_CheckedChanged);
             // 
             // richTextBoxPole
             // 
@@ -438,6 +440,7 @@
             this.buttonWyczysc.TabIndex = 12;
             this.buttonWyczysc.Text = "Wyczyść";
             this.buttonWyczysc.UseVisualStyleBackColor = true;
+            this.buttonWyczysc.Click += new System.EventHandler(this.buttonWyczysc_Click);
             // 
             // buttonZapisz
             // 
@@ -447,6 +450,7 @@
             this.buttonZapisz.TabIndex = 13;
             this.buttonZapisz.Text = "Zapisz";
             this.buttonZapisz.UseVisualStyleBackColor = true;
+            this.buttonZapisz.Click += new System.EventHandler(this.buttonZapisz_Click);
             // 
             // buttonZatwierdz
             // 
@@ -456,6 +460,7 @@
             this.buttonZatwierdz.TabIndex = 14;
             this.buttonZatwierdz.Text = "Zatwierdź";
             this.buttonZatwierdz.UseVisualStyleBackColor = true;
+            this.buttonZatwierdz.Click += new System.EventHandler(this.buttonZatwierdz_Click);
             // 
             // Form1
             // 
@@ -471,7 +476,7 @@
             this.Controls.Add(this.comboBoxKwalifikacja);
             this.Controls.Add(this.panelRadio);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxTermin);
             this.Controls.Add(this.labelNaglowek);
             this.Controls.Add(this.groupBoxAdres);
             this.Controls.Add(this.groupBoxDane);
@@ -511,7 +516,7 @@
         private Label labelUlica;
         private Label labelMiejscowosc;
         private Label labelNaglowek;
-        private ComboBox comboBox1;
+        private ComboBox comboBoxTermin;
         private Label label1;
         private RadioButton radioButtonInformatyk;
         private RadioButton radioButtonProgramista;
@@ -530,8 +535,8 @@
         private TextBox textBoxMail;
         private MaskedTextBox maskedTextBoxKodPocztowy;
         private MaskedTextBox maskedTextBoxTelefon;
-        private MaskedTextBox maskedTextBox2;
-        private MaskedTextBox maskedTextBox1;
+        private MaskedTextBox maskedTextBoxData;
+        private MaskedTextBox maskedTextBoxPESEL;
         private TextBox textBoxMiejsceUr;
     }
 }
